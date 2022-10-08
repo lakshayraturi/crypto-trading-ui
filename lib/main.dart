@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import '../utils/constants.dart';
+import '../screens/home_screen/home_screen.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -9,10 +12,19 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Crypto Trading UI',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        scaffoldBackgroundColor: kBackgroundColor,
+        textTheme: Theme.of(context).textTheme.apply(
+              bodyColor: kPrimaryTextColor,
+              fontFamily: 'Onest',
+            ),
+        iconTheme: const IconThemeData(
+          color: kPrimaryTextColor,
+        ),
       ),
+      home: const HomeScreen(),
     );
   }
 }
