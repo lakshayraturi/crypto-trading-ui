@@ -1,3 +1,4 @@
+import 'package:crypto_trading_ui/screens/home_screen/components/balance_card/balance_card.dart';
 import 'package:crypto_trading_ui/utils/constants.dart';
 import 'package:flutter/material.dart';
 
@@ -31,11 +32,11 @@ class HomeScreen extends StatelessWidget {
               ),
             ],
           ),
-          // CircleAvatar(
-          //   foregroundColor: AssetImage('assets/images/jack_brown.png'),
-          //   backgroundColor: kBackgroundColor,
-          //   radius: 30,
-          // ),
+          const CircleAvatar(
+            foregroundImage: AssetImage('assets/images/jack_brown.png'),
+            backgroundColor: kBackgroundColor,
+            radius: 30,
+          ),
         ],
       ),
     );
@@ -48,6 +49,8 @@ class HomeScreen extends StatelessWidget {
         padding: const EdgeInsets.only(top: 64, bottom: 24),
         children: [
           header(),
+          const SizedBox(height: 36,),
+          const BalanceCard(),
         ],
       ),
     );
